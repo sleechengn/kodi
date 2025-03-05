@@ -11,7 +11,10 @@ RUN echo "root:root" | chpasswd
 
 RUN apt -y install software-properties-common
 RUN add-apt-repository -y ppa:team-xbmc/ppa
-RUN apt -y install kodi
+RUN apt -y install kodi \
+	&& apt install -y language-pack-zh-hans \
+        && locale-gen zh_CN.UTF-8 \
+        && update-locale LANG=zh_CN.UTF-8
 
 ENV SHELL=/usr/bin/bash
 # kasmvnc autostart and menu
