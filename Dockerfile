@@ -14,4 +14,4 @@ RUN add-apt-repository -y ppa:team-xbmc/ppa
 RUN apt -y install kodi
 
 # kasmvnc autostart and menu
-COPY ./root /
+COPY ./root /root
