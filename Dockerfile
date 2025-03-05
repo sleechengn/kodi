@@ -13,5 +13,6 @@ RUN apt -y install software-properties-common
 RUN add-apt-repository -y ppa:team-xbmc/ppa
 RUN apt -y install kodi
 
+ENV SHELL=/usr/bin/bash
 # kasmvnc autostart and menu
 COPY ./root /
